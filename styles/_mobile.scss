@@ -1,0 +1,173 @@
+@use "variables";
+@use "mixins";
+@use "media-queries" as *;
+
+@media #{$mobile} {
+html,
+body {
+  font-family: "Google Sans", sans-serif;
+  height: 100%;
+  position: sticky;
+  display: grid;
+}
+
+.div1 {
+    background-color: variables.$Secondary-color;
+    height: 100%;
+    width: 80px;
+    z-index: 400;
+    position: fixed;
+    @include mixins.center-flex;
+
+    header {
+      padding: 10px;
+
+      ul {
+        list-style: none;
+        align-items: right;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          a {
+            display: none;
+          }
+          svg {
+            color: rgb(166, 230, 241);
+            font-size: variables.$Large-font-size;
+          }
+
+          a#active {
+            color: #397add;          }
+        }
+      }
+    }
+}
+
+.main {
+  margin-left: 80px;
+
+  .div2 {
+  background-color: variables.$Secondary-color;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  z-index: 100;
+
+  img {
+    display: block;
+    filter: blur(4px);
+    overflow: visible;
+    object-fit: cover;
+    width: 200%;
+    height: min-content;
+  }
+
+  h1 {
+    position: absolute;
+    color: white;
+    font-size: variables.$Large-font-size;
+    font-weight: 300;
+    font-family: inherit;
+    text-align: center;
+    top: 20%;
+    z-index: 300;
+  }
+
+  p {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.534);
+    font-size: variables.$Small-font-size;
+    font-family: inherit;
+    text-align: center;
+    top: 30%;
+    z-index: 300;
+  }
+}
+
+.div3 {
+  background-color: variables.$Lightest-color;
+  height: 230%;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  z-index: 100;
+
+  .pdiv {
+    width: 320px;
+    height: 300px;
+    margin-top: 80px;
+    position: absolute;
+    justify-items: center;
+
+    h1 {
+    position: absolute;
+    color: variables.$Darkest-color;
+    font-size: variables.$Large-font-size;
+    font-weight: 300;
+    font-family: inherit;
+    text-align: center;
+    z-index: 300;
+    }
+
+    ol {
+      width: 320px;
+      height: 520px;
+      justify-items: left;
+      list-style: circle;
+      
+      p {
+      color: variables.$Darkest-color;
+      font-size: variables.$Medium-font-size;
+      line-height: 25px;
+      font-weight: 400;
+      font-family: inherit;
+      text-align: left;
+      z-index: 300;
+    }
+  }
+
+  .p1 {
+    margin: 40px;
+    margin-top: 100px;
+    color: variables.$Darkest-color;
+    font-size: variables.$Medium-font-size;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: inherit;
+    text-align: left;
+    z-index: 300;
+  }
+
+  p {
+    margin: 40px;
+    color: variables.$Darkest-color;
+    font-size: variables.$Medium-font-size;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: inherit;
+    text-align: left;
+    z-index: 300;
+  }
+  }
+}
+}
+
+.footer {
+  background-color: variables.$Darkest-color;
+  width: 100%;
+  height: 120px;
+  gap: 22px;
+  @include mixins.center-flex;
+
+  svg {
+    color: rgb(166, 230, 241);
+    font-size: variables.$Large-font-size;
+  }
+}
+}
