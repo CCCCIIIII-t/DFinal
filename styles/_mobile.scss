@@ -8,48 +8,63 @@ body {
   font-family: "Google Sans", sans-serif;
   height: 100%;
   position: sticky;
-  display: grid;
+  display: flex;
 }
 
 .div1 {
-    background-color: variables.$Secondary-color;
-    height: 100%;
-    width: 80px;
-    z-index: 400;
-    position: fixed;
-    @include mixins.center-flex;
+  background-color: variables.$Secondary-color;
+  height: 100%;
+  width: 120px;
+  z-index: 400;
+  position: fixed;
+  @include mixins.center-flex;
+}
 
-    header {
-      padding: 10px;
+.headerdiv1 {
+  background-color: variables.$Secondary-color;
+  height: 100%;
+  width: 120px;
+  z-index: 400;
+  position: fixed;
+  @include mixins.center-flex;
 
-      ul {
-        list-style: none;
-        align-items: right;
+  header {
+    padding: 10px;
+  
+    ul {
+      list-style: none;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+      
+      li {
         display: flex;
-        flex-direction: column;
-        row-gap: 40px;
+        align-items: center;
+        gap: 0.5rem;
 
-        li {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-          a {
-            display: none;
+        a {
+          text-decoration: none;
+          color: variables.$Primary-color;
+          font-size: variables.$Medium-font-size;
+          font-family: inherit;
           }
+
           svg {
             color: rgb(166, 230, 241);
-            font-size: variables.$Large-font-size;
+            font-size: variables.$Medium-font-size;
           }
 
           a#active {
-            color: #397add;          }
+          color: #397add;          
         }
       }
     }
+  }
 }
 
 .main {
-  margin-left: 80px;
+  margin-left: 120px;
 
   .div2 {
   background-color: variables.$Secondary-color;
@@ -58,103 +73,92 @@ body {
   justify-content: center;
   overflow: hidden;
   display: flex;
-  z-index: 100;
 
   img {
     display: block;
     filter: blur(4px);
-    overflow: visible;
+    overflow: hidden;
     object-fit: cover;
-    width: 200%;
+    width: 100%;
     height: min-content;
   }
 
   h1 {
-    position: absolute;
     color: white;
-    font-size: variables.$Large-font-size;
+    position: absolute;
+    margin-top: 280px;
+    font-size: variables.$Extra-large-font-size;
     font-weight: 300;
     font-family: inherit;
     text-align: center;
-    top: 20%;
-    z-index: 300;
   }
 
   p {
-    position: absolute;
     color: rgba(255, 255, 255, 0.534);
-    font-size: variables.$Small-font-size;
+    position: absolute;
+    margin-top: 350px;
+    font-size: variables.$Medium-font-size;
     font-family: inherit;
     text-align: center;
-    top: 30%;
-    z-index: 300;
   }
 }
 
 .div3 {
   background-color: variables.$Lightest-color;
-  height: 230%;
+  height: auto;
   width: 100%;
   justify-content: center;
   display: flex;
-  z-index: 100;
+  flex-direction: column;
 
-  .pdiv {
-    width: 320px;
-    height: 300px;
-    margin-top: 80px;
-    position: absolute;
-    justify-items: center;
-
-    h1 {
-    position: absolute;
+  h1 {
     color: variables.$Darkest-color;
-    font-size: variables.$Large-font-size;
+    margin-top: 80px;
+    font-size: variables.$Extra-large-font-size;
     font-weight: 300;
     font-family: inherit;
     text-align: center;
-    z-index: 300;
-    }
-
-    ol {
-      width: 320px;
-      height: 520px;
-      justify-items: left;
-      list-style: circle;
-      
-      p {
-      color: variables.$Darkest-color;
-      font-size: variables.$Medium-font-size;
-      line-height: 25px;
-      font-weight: 400;
-      font-family: inherit;
-      text-align: left;
-      z-index: 300;
-    }
   }
 
+  ol {
+    width: 900px;
+    height: 200px;
+    margin-left: 80px;
+    justify-items: left;
+    list-style: circle;
+    
+    p {
+    color: variables.$Darkest-color;
+    font-size: variables.$Medium-font-size;
+    margin: 0px;
+    margin-top: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: inherit;
+    text-align: left;
+    }
+  }
   .p1 {
     margin: 40px;
-    margin-top: 100px;
+    margin-top: 80px;
     color: variables.$Darkest-color;
     font-size: variables.$Medium-font-size;
     line-height: 25px;
     font-weight: 400;
     font-family: inherit;
     text-align: left;
-    z-index: 300;
   }
 
   p {
     margin: 40px;
+    margin-top: 10px;
+    margin-bottom: 80px;
     color: variables.$Darkest-color;
     font-size: variables.$Medium-font-size;
     line-height: 25px;
     font-weight: 400;
     font-family: inherit;
     text-align: left;
-    z-index: 300;
-  }
   }
 }
 }
