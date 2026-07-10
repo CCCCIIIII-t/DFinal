@@ -58,6 +58,8 @@ body {
   height: 100%;
   position: sticky;
   display: flex;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .div1 {
@@ -131,8 +133,8 @@ body {
 }
 .main .div2 h1 {
   color: white;
-  position: absolute;
   margin-top: 280px;
+  position: absolute;
   font-size: 38px;
   font-weight: 300;
   font-family: inherit;
@@ -140,8 +142,8 @@ body {
 }
 .main .div2 p {
   color: rgba(255, 255, 255, 0.534);
-  position: absolute;
   margin-top: 350px;
+  position: absolute;
   font-size: 17px;
   font-family: inherit;
   text-align: center;
@@ -163,7 +165,7 @@ body {
   text-align: center;
 }
 .main .div3 ol {
-  width: 900px;
+  width: 90%;
   height: 200px;
   margin-left: 80px;
   justify-items: left;
@@ -215,33 +217,27 @@ body {
   font-size: 24px;
 }
 
-@media (min-width: 320px) and (max-width: 720px) {
+@media (min-width: 1px) and (max-width: 450px) {
   html,
   body {
     font-family: "Google Sans", sans-serif;
     height: 100%;
-    position: sticky;
-    display: flex;
   }
   .div1 {
     background-color: #0b2a33;
-    height: 100%;
-    width: 120px;
+    height: 80px;
+    width: 100%;
     z-index: 400;
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .headerdiv1 {
     background-color: #0b2a33;
-    height: 100%;
-    width: 120px;
+    height: 80px;
+    width: 100%;
     z-index: 400;
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
   .headerdiv1 header {
     padding: 10px;
@@ -250,12 +246,174 @@ body {
     list-style: none;
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     row-gap: 40px;
   }
   .headerdiv1 header ul li {
     display: flex;
     align-items: center;
+    margin: 20px;
+    gap: 0.5rem;
+  }
+  .headerdiv1 header ul li a {
+    text-decoration: none;
+    color: #2f5896;
+    font-size: 17px;
+    font-family: inherit;
+    display: none;
+  }
+  .headerdiv1 header ul li svg {
+    color: rgb(166, 230, 241);
+    font-size: 24px;
+  }
+  .headerdiv1 header ul li a#active {
+    color: #397add;
+  }
+  .main {
+    margin-left: 0px;
+  }
+  .main .div2 {
+    background-color: #0b2a33;
+    height: auto;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+  }
+  .main .div2 img {
+    display: block;
+    filter: blur(4px);
+    overflow: hidden;
+    object-fit: cover;
+    width: 100vh;
+    height: min-content;
+  }
+  .main .div2 h1 {
+    color: white;
+    margin-top: 100px;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: inherit;
+    text-align: center;
+  }
+  .main .div2 p {
+    color: rgba(255, 255, 255, 0.534);
+    margin-top: 190px;
+    position: absolute;
+    font-size: 13px;
+    font-family: inherit;
+    text-align: center;
+    z-index: 200;
+  }
+  .main .div3 {
+    background-color: #b1caf1;
+    height: auto;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .main .div3 h1 {
+    color: #04151a;
+    margin-top: 80px;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: inherit;
+    text-align: center;
+  }
+  .main .div3 ol {
+    width: 70%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    margin-left: 80px;
+    justify-items: left;
+    list-style: circle;
+  }
+  .main .div3 ol p {
+    color: #04151a;
+    font-size: 17px;
+    margin: 0px;
+    margin-top: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: inherit;
+    text-align: left;
+  }
+  .main .div3 .p1 {
+    margin: 40px;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    color: #04151a;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: inherit;
+    text-align: left;
+  }
+  .main .div3 p {
+    margin: 40px;
+    margin-top: 0px;
+    margin-bottom: 80px;
+    color: #04151a;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: inherit;
+    text-align: left;
+  }
+  .footer {
+    background-color: #04151a;
+    width: 100%;
+    height: 120px;
+    gap: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer svg {
+    color: rgb(166, 230, 241);
+    font-size: 24px;
+  }
+}
+@media (min-width: 450px) and (max-width: 850px) {
+  html,
+  body {
+    font-family: "Google Sans", sans-serif;
+    height: 100%;
+  }
+  .div1 {
+    background-color: #0b2a33;
+    height: 80px;
+    width: 100%;
+    z-index: 400;
+    position: fixed;
+  }
+  .headerdiv1 {
+    background-color: #0b2a33;
+    height: 80px;
+    width: 100%;
+    z-index: 400;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+  }
+  .headerdiv1 header {
+    padding: 10px;
+  }
+  .headerdiv1 header ul {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 40px;
+  }
+  .headerdiv1 header ul li {
+    display: flex;
+    align-items: center;
+    margin: 20px;
     gap: 0.5rem;
   }
   .headerdiv1 header ul li a {
@@ -266,19 +424,18 @@ body {
   }
   .headerdiv1 header ul li svg {
     color: rgb(166, 230, 241);
-    font-size: 17px;
+    font-size: 24px;
   }
   .headerdiv1 header ul li a#active {
     color: #397add;
   }
   .main {
-    margin-left: 120px;
+    margin-left: 0px;
   }
   .main .div2 {
     background-color: #0b2a33;
     height: auto;
-    width: 100%;
-    justify-content: center;
+    width: 100vw;
     overflow: hidden;
     display: flex;
   }
@@ -287,13 +444,13 @@ body {
     filter: blur(4px);
     overflow: hidden;
     object-fit: cover;
-    width: 100%;
+    width: 100vh;
     height: min-content;
   }
   .main .div2 h1 {
-    color: white;
+    color: rgb(255, 255, 255);
+    margin-top: 250px;
     position: absolute;
-    margin-top: 280px;
     font-size: 38px;
     font-weight: 300;
     font-family: inherit;
@@ -301,16 +458,17 @@ body {
   }
   .main .div2 p {
     color: rgba(255, 255, 255, 0.534);
-    position: absolute;
     margin-top: 350px;
-    font-size: 17px;
+    position: absolute;
+    font-size: 13px;
     font-family: inherit;
     text-align: center;
+    z-index: 200;
   }
   .main .div3 {
     background-color: #b1caf1;
     height: auto;
-    width: 100%;
+    width: 100vw;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -324,8 +482,10 @@ body {
     text-align: center;
   }
   .main .div3 ol {
-    width: 900px;
-    height: 200px;
+    width: 70%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
     margin-left: 80px;
     justify-items: left;
     list-style: circle;
@@ -334,7 +494,7 @@ body {
     color: #04151a;
     font-size: 17px;
     margin: 0px;
-    margin-top: 20px;
+    margin-top: 15px;
     line-height: 25px;
     font-weight: 400;
     font-family: inherit;
@@ -343,6 +503,7 @@ body {
   .main .div3 .p1 {
     margin: 40px;
     margin-top: 80px;
+    margin-bottom: 0px;
     color: #04151a;
     font-size: 17px;
     line-height: 25px;
@@ -352,7 +513,167 @@ body {
   }
   .main .div3 p {
     margin: 40px;
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 80px;
+    color: #04151a;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: inherit;
+    text-align: left;
+  }
+  .footer {
+    background-color: #04151a;
+    width: 100%;
+    height: 120px;
+    gap: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer svg {
+    color: rgb(166, 230, 241);
+    font-size: 24px;
+  }
+}
+@media (min-width: 450px) and (max-width: 850px) {
+  html,
+  body {
+    font-family: "Google Sans", sans-serif;
+    height: 100%;
+  }
+  .div1 {
+    background-color: #0b2a33;
+    height: 80px;
+    width: 100%;
+    z-index: 400;
+    position: fixed;
+  }
+  .headerdiv1 {
+    background-color: #0b2a33;
+    height: 80px;
+    width: 100%;
+    z-index: 400;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+  }
+  .headerdiv1 header {
+    padding: 10px;
+  }
+  .headerdiv1 header ul {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 40px;
+  }
+  .headerdiv1 header ul li {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    gap: 0.5rem;
+  }
+  .headerdiv1 header ul li a {
+    text-decoration: none;
+    color: #2f5896;
+    font-size: 17px;
+    font-family: inherit;
+    display: none;
+  }
+  .headerdiv1 header ul li svg {
+    color: rgb(166, 230, 241);
+    font-size: 24px;
+  }
+  .headerdiv1 header ul li a#active {
+    color: #397add;
+  }
+  .main {
+    margin-left: 0px;
+  }
+  .main .div2 {
+    background-color: #0b2a33;
+    height: auto;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+  }
+  .main .div2 img {
+    display: block;
+    filter: blur(4px);
+    overflow: hidden;
+    object-fit: cover;
+    width: 100vh;
+    height: min-content;
+  }
+  .main .div2 h1 {
+    color: rgb(255, 255, 255);
+    margin-top: 150px;
+    position: absolute;
+    font-size: 38px;
+    font-weight: 300;
+    font-family: inherit;
+    text-align: center;
+  }
+  .main .div2 p {
+    color: rgba(255, 255, 255, 0.534);
+    margin-top: 250px;
+    position: absolute;
+    font-size: 13px;
+    font-family: inherit;
+    text-align: center;
+    z-index: 200;
+  }
+  .main .div3 {
+    background-color: #b1caf1;
+    height: auto;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .main .div3 h1 {
+    color: #04151a;
+    margin-top: 80px;
+    font-size: 38px;
+    font-weight: 300;
+    font-family: inherit;
+    text-align: center;
+  }
+  .main .div3 ol {
+    width: 70%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    margin-left: 80px;
+    justify-items: left;
+    list-style: circle;
+  }
+  .main .div3 ol p {
+    color: #04151a;
+    font-size: 17px;
+    margin: 0px;
+    margin-top: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: inherit;
+    text-align: left;
+  }
+  .main .div3 .p1 {
+    margin: 40px;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    color: #04151a;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: inherit;
+    text-align: left;
+  }
+  .main .div3 p {
+    margin: 40px;
+    margin-top: 0px;
     margin-bottom: 80px;
     color: #04151a;
     font-size: 17px;

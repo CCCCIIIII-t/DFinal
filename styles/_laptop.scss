@@ -1,32 +1,30 @@
 @use "variables";
 @use "mixins";
+@use "media-queries" as *;
 
+@media #{$tablet} {
 html,
 body {
   font-family: "Google Sans", sans-serif;
   height: 100%;
-  position: sticky;
-  display: flex;
-  box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 .div1 {
   background-color: variables.$Secondary-color;
-  height: 100%;
-  width: 180px;
+  height: 80px;
+  width: 100%;
   z-index: 400;
   position: fixed;
-  @include mixins.center-flex;
 }
 
 .headerdiv1 {
   background-color: variables.$Secondary-color;
-  height: 100%;
-  width: 180px;
+  height: 80px;
+  width: 100%;
   z-index: 400;
   position: fixed;
-  @include mixins.center-flex;
+  display: flex;
+  justify-content: center;
 
   header {
     padding: 10px;
@@ -35,12 +33,14 @@ body {
       list-style: none;
       align-items: center;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
       row-gap: 40px;
       
       li {
         display: flex;
         align-items: center;
+        margin: 20px;
         gap: 0.5rem;
 
         a {
@@ -48,11 +48,12 @@ body {
           color: variables.$Primary-color;
           font-size: variables.$Medium-font-size;
           font-family: inherit;
+          display: none;
           }
 
           svg {
             color: rgb(166, 230, 241);
-            font-size: variables.$Medium-font-size;
+            font-size: variables.$Large-font-size;
           }
 
           a#active {
@@ -64,13 +65,12 @@ body {
 }
 
 .main {
-  margin-left: 180px;
+  margin-left: 0px;
 
   .div2 {
   background-color: variables.$Secondary-color;
   height: auto;
-  width: 100%;
-  justify-content: center;
+  width: 100vw;
   overflow: hidden;
   display: flex;
 
@@ -79,13 +79,13 @@ body {
     filter: blur(4px);
     overflow: hidden;
     object-fit: cover;
-    width: 200%;
+    width: 100vh;
     height: min-content;
   }
 
   h1 {
-    color: white;
-    margin-top: 280px;
+    color: rgb(255, 255, 255);
+    margin-top: 150px;
     position: absolute;
     font-size: variables.$Extra-large-font-size;
     font-weight: 300;
@@ -95,18 +95,19 @@ body {
 
   p {
     color: rgba(255, 255, 255, 0.534);
-    margin-top: 350px;
+    margin-top: 250px;
     position: absolute;
-    font-size: variables.$Medium-font-size;
+    font-size: variables.$Small-font-size;
     font-family: inherit;
     text-align: center;
+    z-index: 200;
   }
 }
 
 .div3 {
   background-color: variables.$Lightest-color;
   height: auto;
-  width: 100%;
+  width: 100vw;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -121,8 +122,10 @@ body {
   }
 
   ol {
-    width: 90%;
-    height: 200px;
+    width: 70%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
     margin-left: 80px;
     justify-items: left;
     list-style: circle;
@@ -131,7 +134,7 @@ body {
     color: variables.$Darkest-color;
     font-size: variables.$Medium-font-size;
     margin: 0px;
-    margin-top: 20px;
+    margin-top: 15px;
     line-height: 25px;
     font-weight: 400;
     font-family: inherit;
@@ -141,6 +144,7 @@ body {
   .p1 {
     margin: 40px;
     margin-top: 80px;
+    margin-bottom: 0px;
     color: variables.$Darkest-color;
     font-size: variables.$Medium-font-size;
     line-height: 25px;
@@ -151,7 +155,7 @@ body {
 
   p {
     margin: 40px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 80px;
     color: variables.$Darkest-color;
     font-size: variables.$Medium-font-size;
@@ -174,4 +178,5 @@ body {
     color: rgb(166, 230, 241);
     font-size: variables.$Large-font-size;
   }
+}
 }
