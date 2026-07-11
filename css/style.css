@@ -126,7 +126,6 @@ body {
 .main .div2 img {
   display: block;
   filter: blur(4px);
-  overflow: hidden;
   object-fit: cover;
   width: 200%;
   height: min-content;
@@ -217,6 +216,164 @@ body {
   font-size: 24px;
 }
 
+.maincontact {
+  margin-left: 180px;
+  width: 100vw;
+}
+.maincontact .div2contact {
+  background-color: #0b2a33;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+}
+.maincontact .div2contact .sourcediv {
+  width: 90%;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex-direction: column;
+}
+.maincontact .div2contact .sourcediv .plink {
+  margin: 0px;
+}
+.maincontact .div2contact .imagecontact {
+  display: block;
+  filter: blur(4px);
+  object-fit: cover;
+  width: 200%;
+  height: min-content;
+}
+.maincontact .div2contact .h1maincontact {
+  color: #04151a;
+  margin-top: 80px;
+  position: absolute;
+  font-size: 38px;
+  font-weight: 300;
+  font-family: inherit;
+  text-align: center;
+}
+.maincontact .div2contact .pcontact {
+  color: #04151a;
+  margin-top: 150px;
+  position: absolute;
+  font-size: 17px;
+  font-family: inherit;
+  text-align: center;
+}
+.maincontact .div2contact .pcontact2 {
+  color: #04151a;
+  width: 70%;
+  line-height: 18px;
+  margin-top: 220px;
+  position: absolute;
+  font-size: 17px;
+  font-family: inherit;
+  text-align: center;
+}
+.maincontact .div2contact .formcontact {
+  width: 70%;
+  height: auto;
+  margin-top: 260px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-self: center;
+  gap: 1rem;
+}
+.maincontact .div2contact .formcontact label {
+  color: #04151a;
+  font-size: 17px;
+  font-family: inherit;
+}
+.maincontact .div2contact .formcontact input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgba(182, 181, 235, 0.5);
+  border: 1px solid #04151a;
+  font-size: 17px;
+  padding: 10px;
+}
+.maincontact .div2contact .formcontact textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  background-color: rgba(182, 181, 235, 0.5);
+  border: 1px solid #04151a;
+  font-size: 17px;
+  padding: 10px;
+}
+.maincontact .div2contact .formcontact button {
+  height: 40px;
+  border-radius: 5px;
+  background-color: #0b2a33;
+  color: #b1caf1;
+  font-size: 17px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.partdiv {
+  margin: 40px;
+  padding: 10px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 90px;
+  background-color: rgb(60, 70, 122);
+}
+.partdiv .partp {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+
+.partdiv2 {
+  margin: 40px;
+  margin-top: 10px;
+  padding: 10px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: auto;
+}
+.partdiv2 .circlediv {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: rgb(60, 70, 122);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+}
+.partdiv2 .circlediv h3 {
+  margin-top: 10px;
+  line-height: 15px;
+  color: #b1caf1;
+  font-size: 13px;
+  top: 50%;
+  text-align: center;
+}
+.partdiv2 .circlediv svg {
+  color: #b1caf1;
+  font-size: 24px;
+}
+
 @media (min-width: 1px) and (max-width: 450px) {
   html,
   body {
@@ -256,7 +413,7 @@ body {
     margin: 20px;
     gap: 0.5rem;
   }
-  .headerdiv1 header ul li a {
+  .headerdiv1 header ul li .a1 {
     text-decoration: none;
     color: #2f5896;
     font-size: 17px;
@@ -267,7 +424,7 @@ body {
     color: rgb(166, 230, 241);
     font-size: 24px;
   }
-  .headerdiv1 header ul li a#active {
+  .headerdiv1 header ul li .a1#active {
     color: #397add;
   }
   .main {
@@ -376,6 +533,161 @@ body {
     color: rgb(166, 230, 241);
     font-size: 24px;
   }
+  .maincontact {
+    margin-left: 0px;
+  }
+  .maincontact .div2contact {
+    background-color: #0b2a33;
+    height: auto;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+  }
+  .maincontact .div2contact .sourcediv {
+    width: 90%;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-direction: column;
+  }
+  .maincontact .div2contact .sourcediv .plink {
+    margin: 0px;
+  }
+  .maincontact .div2contact .imagecontact {
+    display: block;
+    filter: blur(4px);
+    object-fit: cover;
+    width: 200%;
+    height: 100vh;
+  }
+  .maincontact .div2contact .h1maincontact {
+    color: #04151a;
+    margin-top: 110px;
+    position: absolute;
+    font-size: 38px;
+    font-weight: 300;
+    font-family: inherit;
+    text-align: center;
+  }
+  .maincontact .div2contact .pcontact {
+    color: #04151a;
+    margin-top: 190px;
+    position: absolute;
+    font-size: 17px;
+    font-family: inherit;
+    text-align: center;
+  }
+  .maincontact .div2contact .pcontact2 {
+    color: rgb(228, 228, 228);
+    width: 70%;
+    line-height: 18px;
+    margin-top: 280px;
+    position: absolute;
+    font-size: 17px;
+    font-family: inherit;
+    text-align: center;
+  }
+  .maincontact .div2contact .formcontact {
+    width: 70%;
+    height: auto;
+    margin-top: 260px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-self: center;
+    gap: 1rem;
+  }
+  .maincontact .div2contact .formcontact label {
+    color: #04151a;
+    font-size: 17px;
+    font-family: inherit;
+  }
+  .maincontact .div2contact .formcontact input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(182, 181, 235, 0.5);
+    border: 1px solid #04151a;
+    font-size: 17px;
+    padding: 10px;
+  }
+  .maincontact .div2contact .formcontact textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgba(182, 181, 235, 0.5);
+    border: 1px solid #04151a;
+    font-size: 17px;
+    padding: 10px;
+  }
+  .maincontact .div2contact .formcontact button {
+    height: 40px;
+    border-radius: 5px;
+    background-color: #0b2a33;
+    color: #b1caf1;
+    font-size: 17px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .partdiv {
+    margin: 40px;
+    padding: 10px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 90px;
+    background-color: rgb(60, 70, 122);
+  }
+  .partdiv .partp {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+  }
+  .partdiv2 {
+    margin: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+  }
+  .partdiv2 .circlediv {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: rgb(60, 70, 122);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .partdiv2 .circlediv h3 {
+    margin-top: 10px;
+    line-height: 15px;
+    color: #b1caf1;
+    font-size: 11px;
+    top: 50%;
+    text-align: center;
+  }
+  .partdiv2 .circlediv svg {
+    color: #b1caf1;
+    font-size: 24px;
+  }
 }
 @media (min-width: 450px) and (max-width: 850px) {
   html,
@@ -416,17 +728,18 @@ body {
     margin: 20px;
     gap: 0.5rem;
   }
-  .headerdiv1 header ul li a {
+  .headerdiv1 header ul li .a1 {
     text-decoration: none;
     color: #2f5896;
     font-size: 17px;
     font-family: inherit;
+    display: none;
   }
   .headerdiv1 header ul li svg {
     color: rgb(166, 230, 241);
     font-size: 24px;
   }
-  .headerdiv1 header ul li a#active {
+  .headerdiv1 header ul li .a1#active {
     color: #397add;
   }
   .main {
@@ -535,8 +848,162 @@ body {
     color: rgb(166, 230, 241);
     font-size: 24px;
   }
+  .maincontact {
+    margin-left: 0px;
+  }
+  .maincontact .div2contact {
+    background-color: #0b2a33;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+  }
+  .maincontact .div2contact .sourcediv {
+    width: 90%;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-direction: column;
+  }
+  .maincontact .div2contact .sourcediv .plink {
+    margin: 0px;
+  }
+  .maincontact .div2contact .imagecontact {
+    display: block;
+    filter: blur(4px);
+    object-fit: cover;
+    width: 200%;
+    height: min-content;
+  }
+  .maincontact .div2contact .h1maincontact {
+    color: #04151a;
+    margin-top: 80px;
+    position: absolute;
+    font-size: 38px;
+    font-weight: 300;
+    font-family: inherit;
+    text-align: center;
+  }
+  .maincontact .div2contact .pcontact {
+    color: #04151a;
+    margin-top: 150px;
+    position: absolute;
+    font-size: 17px;
+    font-family: inherit;
+    text-align: center;
+  }
+  .maincontact .div2contact .pcontact2 {
+    color: #04151a;
+    width: 70%;
+    line-height: 18px;
+    margin-top: 220px;
+    position: absolute;
+    font-size: 17px;
+    font-family: inherit;
+    text-align: center;
+  }
+  .maincontact .div2contact .formcontact {
+    width: 70%;
+    height: auto;
+    margin-top: 260px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-self: center;
+    gap: 1rem;
+  }
+  .maincontact .div2contact .formcontact label {
+    color: #04151a;
+    font-size: 17px;
+    font-family: inherit;
+  }
+  .maincontact .div2contact .formcontact input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(182, 181, 235, 0.5);
+    border: 1px solid #04151a;
+    font-size: 17px;
+    padding: 10px;
+  }
+  .maincontact .div2contact .formcontact textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgba(182, 181, 235, 0.5);
+    border: 1px solid #04151a;
+    font-size: 17px;
+    padding: 10px;
+  }
+  .maincontact .div2contact .formcontact button {
+    height: 40px;
+    border-radius: 5px;
+    background-color: #0b2a33;
+    color: #b1caf1;
+    font-size: 17px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .partdiv {
+    margin: 40px;
+    padding: 10px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 90px;
+    background-color: rgb(60, 70, 122);
+  }
+  .partdiv .partp {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+  }
+  .partdiv2 {
+    margin: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+  }
+  .partdiv2 .circlediv {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: rgb(60, 70, 122);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .partdiv2 .circlediv h3 {
+    margin-top: 10px;
+    line-height: 15px;
+    color: #b1caf1;
+    font-size: 13px;
+    top: 50%;
+    text-align: center;
+  }
+  .partdiv2 .circlediv svg {
+    color: #b1caf1;
+    font-size: 24px;
+  }
 }
-@media (min-width: 450px) and (max-width: 850px) {
+@media (min-width: 850px) and (max-width: 1125px) {
   html,
   body {
     font-family: "Google Sans", sans-serif;
@@ -575,7 +1042,7 @@ body {
     margin: 20px;
     gap: 0.5rem;
   }
-  .headerdiv1 header ul li a {
+  .headerdiv1 header ul li .a1 {
     text-decoration: none;
     color: #2f5896;
     font-size: 17px;
@@ -586,7 +1053,7 @@ body {
     color: rgb(166, 230, 241);
     font-size: 24px;
   }
-  .headerdiv1 header ul li a#active {
+  .headerdiv1 header ul li .a1#active {
     color: #397add;
   }
   .main {
@@ -693,6 +1160,160 @@ body {
   }
   .footer svg {
     color: rgb(166, 230, 241);
+    font-size: 24px;
+  }
+  .maincontact {
+    margin-left: 0px;
+  }
+  .maincontact .div2contact {
+    background-color: #0b2a33;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+  }
+  .maincontact .div2contact .sourcediv {
+    width: 90%;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-direction: column;
+  }
+  .maincontact .div2contact .sourcediv .plink {
+    margin: 0px;
+  }
+  .maincontact .div2contact .imagecontact {
+    display: block;
+    filter: blur(4px);
+    object-fit: cover;
+    width: 200%;
+    height: 100vh;
+  }
+  .maincontact .div2contact .h1maincontact {
+    color: #04151a;
+    margin-top: 120px;
+    position: absolute;
+    font-size: 38px;
+    font-weight: 300;
+    font-family: inherit;
+    text-align: center;
+  }
+  .maincontact .div2contact .pcontact {
+    color: #04151a;
+    margin-top: 200px;
+    position: absolute;
+    font-size: 17px;
+    font-family: inherit;
+    text-align: center;
+  }
+  .maincontact .div2contact .pcontact2 {
+    color: #04151a;
+    width: 70%;
+    line-height: 18px;
+    margin-top: 250px;
+    position: absolute;
+    font-size: 17px;
+    font-family: inherit;
+    text-align: center;
+  }
+  .maincontact .div2contact .formcontact {
+    width: 70%;
+    height: auto;
+    margin-top: 260px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-self: center;
+    gap: 1rem;
+  }
+  .maincontact .div2contact .formcontact label {
+    color: #04151a;
+    font-size: 17px;
+    font-family: inherit;
+  }
+  .maincontact .div2contact .formcontact input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(182, 181, 235, 0.5);
+    border: 1px solid #04151a;
+    font-size: 17px;
+    padding: 10px;
+  }
+  .maincontact .div2contact .formcontact textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgba(182, 181, 235, 0.5);
+    border: 1px solid #04151a;
+    font-size: 17px;
+    padding: 10px;
+  }
+  .maincontact .div2contact .formcontact button {
+    height: 40px;
+    border-radius: 5px;
+    background-color: #0b2a33;
+    color: #b1caf1;
+    font-size: 17px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .partdiv {
+    margin: 40px;
+    padding: 10px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 90px;
+    background-color: rgb(60, 70, 122);
+  }
+  .partdiv .partp {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+  }
+  .partdiv2 {
+    margin: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+  }
+  .partdiv2 .circlediv {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: rgb(60, 70, 122);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .partdiv2 .circlediv h3 {
+    margin-top: 10px;
+    line-height: 15px;
+    color: #b1caf1;
+    font-size: 13px;
+    top: 50%;
+    text-align: center;
+  }
+  .partdiv2 .circlediv svg {
+    color: #b1caf1;
     font-size: 24px;
   }
 }/*# sourceMappingURL=style.css.map */

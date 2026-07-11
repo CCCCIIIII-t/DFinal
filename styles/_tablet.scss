@@ -43,11 +43,12 @@ body {
         margin: 20px;
         gap: 0.5rem;
 
-        a {
+        .a1 {
           text-decoration: none;
           color: variables.$Primary-color;
           font-size: variables.$Medium-font-size;
           font-family: inherit;
+          display: none;
           }
 
           svg {
@@ -55,7 +56,7 @@ body {
             font-size: variables.$Large-font-size;
           }
 
-          a#active {
+          .a1#active {
           color: #397add;          
         }
       }
@@ -176,6 +177,179 @@ body {
   svg {
     color: rgb(166, 230, 241);
     font-size: variables.$Large-font-size;
+  }
+}
+
+.maincontact {
+  margin-left: 0px;
+
+  .div2contact {
+  background-color: variables.$Secondary-color;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+
+  .sourcediv {
+  width: 90%;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex-direction: column;
+
+    .plink {
+      margin: 0px;
+    }
+  }
+
+  .imagecontact {
+    display: block;
+    filter: blur(4px);
+    object-fit: cover;
+    width: 200%;
+    height: min-content;
+  }
+
+  .h1maincontact {
+    color: variables.$Darkest-color;
+    margin-top: 80px;
+    position: absolute;
+    font-size: variables.$Extra-large-font-size;
+    font-weight: 300;
+    font-family: inherit;
+    text-align: center;
+  }
+
+  .pcontact {
+    color: variables.$Darkest-color;
+    margin-top: 150px;
+    position: absolute;
+    font-size: variables.$Medium-font-size;
+    font-family: inherit;
+    text-align: center;
+  }
+
+  .pcontact2 {
+    color: variables.$Darkest-color;
+    width: 70%;
+    line-height: 18px;
+    margin-top: 220px;
+    position: absolute;
+    font-size: variables.$Medium-font-size;
+    font-family: inherit;
+    text-align: center;
+  }
+  
+  .formcontact {
+    width: 70%;
+    height: auto;
+    margin-top: 260px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-self: center;
+    gap: 1rem;
+
+    label {
+      color: variables.$Darkest-color;
+      font-size: variables.$Medium-font-size;
+      font-family: inherit;
+    }
+
+    input {
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      background-color: rgba(182, 181, 235, 0.5);
+      border: 1px solid variables.$Darkest-color;
+      font-size: variables.$Medium-font-size;
+      padding: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 5px;
+      background-color: rgba(182, 181, 235, 0.5);
+      border: 1px solid variables.$Darkest-color;
+      font-size: variables.$Medium-font-size;
+      padding: 10px;
+    }
+
+    button {
+      height: 40px;
+      border-radius: 5px;
+      background-color: variables.$Secondary-color;
+      color: variables.$Lightest-color;
+      font-size: variables.$Medium-font-size;
+      font-family: inherit;
+      cursor: pointer;
+    }
+  }
+}
+}
+
+.partdiv {
+  margin: 40px;
+  padding: 10px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 90px;
+  background-color: rgb(60, 70, 122);
+
+  .partp {
+    font-size: variables.$Large-font-size;
+    color: white;
+    text-align: center;
+  }
+}
+
+.partdiv2 {
+  margin: 40px;
+  margin-top: 10px;
+  padding: 10px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: auto;
+
+  .circlediv {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: rgb(60, 70, 122);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      margin-top: 10px;
+      line-height: 15px;
+      color: variables.$Lightest-color;
+      font-size: variables.$Small-font-size;
+      top: 50%;
+      text-align: center;
+    }
+
+    svg {
+      color: variables.$Lightest-color;
+      font-size: variables.$Large-font-size;
+    }
   }
 }
 }
